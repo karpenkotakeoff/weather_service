@@ -35,19 +35,13 @@ Ensure you have Python 3.12 or later installed.
    poetry install
    ```
 
-3. **Install Dependencies:**
-
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Environment Variables:**
+3. **Environment Variables:**
 
    Set the environment variable for the city (e.g., Kyiv) and your OpenWeatherMap API key. You can do this in your shell
    or a `.env` file.
 
    ```bash
-   CITY='Kyiv'
+   CITY = "Kyiv"
    API_KEY = "OpenWeatherMap_API_KEY"
    X_TOKEN = "your_32_char_token"
    DATABASE_URL = "your_database_url"
@@ -56,7 +50,7 @@ Ensure you have Python 3.12 or later installed.
    APP_PORT = 7777
    ```
 
-5. **Run the Application:**
+4. **Run the Application:**
 
    ```bash
    uvicorn app:app --reload
@@ -75,7 +69,7 @@ Example request:
 
 ```bash
 curl -X 'GET' \
-  'http://127.0.0.1:8000/temperature?day=2023-01-01' \
+  'http://"localhost":7777/temperature?day=2023-01-01' \
   -H 'accept: application/json' \
   -H 'x-token: your_32_char_token'
 ```
